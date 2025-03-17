@@ -1,4 +1,4 @@
-const { playBoom, playPing } = require("sounds.js");
+import { playBoom, playPing } from import("./sounds.js");
 
 const canvas = document.createElement("canvas");
 document.body.appendChild(canvas);
