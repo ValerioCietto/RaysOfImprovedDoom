@@ -1,3 +1,5 @@
+import { boomSound, pingSound } from "./modules/sounds.js";
+
 const canvas = document.createElement("canvas");
 document.body.appendChild(canvas);
 const ctx = canvas.getContext("2d");
@@ -119,8 +121,7 @@ function createButtons() {
         if (money >= 5) {
           spaceship.radius += 10;
           money -= 5;
-          pingSound.currentTime = 0;
-          pingSound.play();
+          playPing();
         }
       },
     },
@@ -131,8 +132,7 @@ function createButtons() {
         if (money >= 5) {
           spaceship.rays += 1;
           money -= 5;
-          pingSound.currentTime = 0;
-          pingSound.play();
+          playPing();
         }
       },
     },
@@ -143,8 +143,7 @@ function createButtons() {
         if (money >= 5) {
           spaceship.rayPower += 0.2;
           money -= 5;
-          pingSound.currentTime = 0;
-          pingSound.play();
+          playPing();
         }
       },
     },
@@ -155,8 +154,7 @@ function createButtons() {
         if (money >= 1000) {
           spaceship.finalWeapon = true;
           money -= 1000;
-          pingSound.currentTime = 0;
-          pingSound.play();
+          playPing();
         }
       },
     },
@@ -270,8 +268,7 @@ function checkLaserHits() {
           killCount++;
           money++;
           adjustSpawnRate();
-          boomSound.currentTime = 0;
-          boomSound.play();
+          playBoom();
         }
       }
     }
