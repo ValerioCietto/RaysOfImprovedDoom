@@ -1,4 +1,4 @@
-import { boomSound, pingSound } from "./modules/sounds.js";
+const { boomSound, pingSound } = require("sounds.js");
 
 const canvas = document.createElement("canvas");
 document.body.appendChild(canvas);
