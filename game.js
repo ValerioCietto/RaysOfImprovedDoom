@@ -1,4 +1,4 @@
-const { boomSound, pingSound } = require("sounds.js");
+const { playBoom, playPing } = require("sounds.js");
 
 const canvas = document.createElement("canvas");
 document.body.appendChild(canvas);
@@ -28,9 +28,6 @@ let tutorialStartTime = Date.now();
 let spawnRate = 1;
 let spawnInterval = 1000;
 let asteroidSpawnTimer;
-
-const boomSound = new Audio("boom.wav");
-const pingSound = new Audio("ping.wav");
 
 function spawnAsteroids() {
   for (let i = 0; i < spawnRate; i++) {
