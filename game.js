@@ -62,7 +62,7 @@ setInterval(spawnStars, 5000);
 
 document.addEventListener("mousemove", (event) => {
   spaceship.x = event.clientX;
-  spaceship.y = event.clientY + 60;
+  spaceship.y = event.clientY - 60;
 });
 
 document.addEventListener(
@@ -70,7 +70,7 @@ document.addEventListener(
   (event) => {
     if (event.touches.length > 0) {
       spaceship.x = event.touches[0].clientX;
-      spaceship.y = event.touches[0].clientY + 60;
+      spaceship.y = event.touches[0].clientY - 60;
     }
   },
   { passive: false }
